@@ -1,0 +1,84 @@
+/* The LEO Ref — shared styling.
+   Dark to match the app, no frameworks, no external requests, no fonts to
+   fetch. Three pages do not need a build step. */
+:root {
+  --bg: #0b0b0c;
+  --bg-alt: #16171a;
+  --card: #212329;
+  --border: #3a3e47;
+  --text: #f2f3f5;
+  --muted: #b9bdc6;
+  --faint: #848a96;
+  --accent: #e6b34a;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+header { border-bottom: 1px solid var(--border); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 0.35rem;
+}
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 0.4rem; font-weight: 800; }
+h2 {
+  font-size: 1.05rem;
+  margin: 2.25rem 0 0.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+h3 { font-size: 0.95rem; margin: 1.5rem 0 0.4rem; font-weight: 700; color: var(--accent); }
+p, li { color: var(--muted); }
+a { color: var(--accent); }
+a:hover { color: #f0c870; }
+.lede { font-size: 1.05rem; color: var(--muted); margin-top: 0; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+.summary {
+  background: var(--bg-alt);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.summary strong { color: var(--text); }
+nav.pages { margin: 0 0 2rem; font-size: 0.9rem; }
+nav.pages a { margin-right: 1.25rem; }
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  color: var(--faint);
+  font-size: 0.82rem;
+}
+footer p { color: var(--faint); }
+code {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.88em;
+}
+.date { color: var(--faint); font-size: 0.85rem; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.4rem; }
+@media (max-width: 30rem) {
+  .wrap { padding: 1.75rem 1rem 3rem; }
+  h1 { font-size: 1.55rem; }
+}

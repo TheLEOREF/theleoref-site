@@ -1,0 +1,5 @@
+# Normalise line endings so Git stops warning on every add, and so the repo
+# holds LF regardless of which machine commits to it. Irrelevant to how GitHub
+# Pages serves these files; purely to keep the working tree quiet and the
+# history clean.
+* text=auto eol=lf
